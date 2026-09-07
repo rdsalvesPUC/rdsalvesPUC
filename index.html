@@ -4,193 +4,207 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rodrigo Alves — Coleção de Criações</title>
-  <meta name="description" content="Plugins de Figma criados por Rodrigo Alves para incrementar seu próprio fluxo de trabalho como designer." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
+  <meta name="description" content="Plugins de Figma criados por Rodrigo Alves para incrementar seu próprio fluxo de trabalho." />
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="wrap">
-      <a href="#top" class="brand">Rodrigo <span>Alves</span></a>
-      <nav class="site-nav">
-        <a href="#sobre">Sobre a coleção</a>
-        <a href="#plugins">Plugins</a>
-        <a href="#contato">Contato</a>
-      </nav>
+  <nav class="site-nav">
+    <a href="#top" class="brand">Rodrigo Alves</a>
+    <div>
+      <a href="#plugins">Plugins</a>
+      <a href="#contato">Contato</a>
     </div>
-  </header>
+  </nav>
 
   <main id="top">
 
-    <section class="hero">
+    <!-- ============ HERO ============ -->
+    <section class="panel panel--dark hero">
+      <div class="rail">
+        <span class="tick" aria-hidden="true"></span>
+        <span>Coleção de criações — 2026</span>
+      </div>
       <div class="wrap">
-        <span class="eyebrow">Coleção de criações</span>
-        <h1>Plugins de Figma que eu construo para o meu próprio fluxo de trabalho</h1>
-        <p class="lede">
-          <!-- TODO: ajustar o texto de abertura quando tiver os detalhes dos plugins -->
-          Ao longo dos meus anos como designer, comecei a criar pequenas ferramentas para o Figma
-          sempre que sentia falta de algo no meu dia a dia de trabalho. Esta coleção reúne três
-          desses projetos: a ideia por trás de cada um, como foram desenvolvidos e onde estão hoje.
+        <div class="hero-eyebrow">
+          COLEÇÃO
+          <svg class="icon" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H38.5M38.5 8L31.5 1M38.5 8L31.5 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h1>Plugins<br />de Figma</h1>
+        <p class="tagline">
+          ferramentas pessoais para o meu fluxo de trabalho
+          <svg class="icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L15 15M15 1L1 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </p>
       </div>
+      <svg class="hero-scroll" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(45deg);">
+        <path d="M4 22C22 18 42 24 52 42" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        <path d="M40 40.5L52.5 43.5L50 30.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
     </section>
 
-    <section class="intro" id="sobre">
-      <div class="wrap intro-grid">
-        <h2>Por que plugins?</h2>
-        <div class="intro-body">
-          <p class="placeholder-text">
-            [PLACEHOLDER — Rodrigo: escreva aqui 1–2 parágrafos sobre por que você começou a criar
-            plugins para o Figma. Pode falar sobre a ponte entre design e desenvolvimento, sobre
-            resolver problemas reais do seu fluxo de trabalho no dia a dia (ex: na Casas Bahia), ou
-            sobre como isso se conecta com o seu interesse em unir design e código.]
-          </p>
+    <!-- ============ INTRO EDITORIAL ============ -->
+    <section class="panel panel--light" id="sobre">
+      <div class="rail">
+        <span class="tick" aria-hidden="true"></span>
+        <span>Como &amp; por quê</span>
+      </div>
+      <div class="wrap">
+        <div class="editorial" data-reveal>
+          <h2>Por<br /><em>que plugins?</em></h2>
+          <div class="editorial-body">
+            <p class="placeholder-text">
+              [PLACEHOLDER — Rodrigo: escreva aqui 1–2 parágrafos sobre por que você começou a criar
+              plugins para o Figma. Pode falar sobre a ponte entre design e desenvolvimento, sobre
+              resolver problemas reais do seu fluxo de trabalho no dia a dia, ou sobre como isso se
+              conecta com o seu interesse em unir design e código.]
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="plugins" id="plugins">
-      <div class="wrap">
-        <h2>Os plugins</h2>
-        <p class="section-sub">Três ferramentas pessoais, em estágios diferentes de maturidade.</p>
+    <!-- ============ INDEX GRID ============ -->
+    <section class="panel panel--light panel--tight" id="plugins">
+      <div class="index-heading" data-reveal>
+        <h2>Os <em>plugins</em></h2>
+        <p>Três ferramentas pessoais, em estágios diferentes de maturidade.</p>
+      </div>
+      <div class="index-grid" data-reveal>
+        <a class="index-cell" href="#figma-navigation">
+          <span class="num">01 / 03</span>
+          <span class="name">Figma Navigation
+            <svg class="icon" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H38.5M38.5 8L31.5 1M38.5 8L31.5 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+        <a class="index-cell" href="#figlens">
+          <span class="num">02 / 03</span>
+          <span class="name">FigLens
+            <svg class="icon" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H38.5M38.5 8L31.5 1M38.5 8L31.5 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+        <a class="index-cell" href="#json-to-layout">
+          <span class="num">03 / 03</span>
+          <span class="name">Json to Layout
+            <svg class="icon" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H38.5M38.5 8L31.5 1M38.5 8L31.5 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </div>
+    </section>
 
-        <!-- ===================== PLUGIN 1 — Figma Navigation ===================== -->
-        <article class="plugin-card" data-plugin="figma-navigation">
-          <div class="plugin-media">
-            <!-- TODO: substituir por <img src="./assets/img/figma-navigation.png" alt="..."> quando tiver o print -->
-            <div class="placeholder-label">
-              <strong>Figma Navigation</strong>
-              imagem/gif em breve
+    <!-- ============ SPREAD 1 — Figma Navigation ============ -->
+    <section class="panel panel--dark" id="figma-navigation">
+      <div class="rail">
+        <span class="tick" aria-hidden="true"></span>
+        <span>Plugin 01 / 03</span>
+      </div>
+      <div class="spread" data-reveal>
+        <div class="spread-media">
+          <div class="frame">imagem/gif em breve</div>
+          <span class="project-tag">Plugin // Figma Navigation</span>
+        </div>
+        <div class="spread-content">
+          <h3>O que é a <em>Figma Navigation</em> e qual o desafio?</h3>
+          <div class="spread-block">
+            <h4>A ideia</h4>
+            <p class="placeholder-text">[PLACEHOLDER — o que te fez criar esse plugin? que problema de navegação/organização no Figma ele resolve?]</p>
+          </div>
+          <div class="spread-block">
+            <h4>O desenvolvimento</h4>
+            <p class="placeholder-text">[PLACEHOLDER — como foi construído, principais desafios, decisões técnicas]</p>
+          </div>
+          <div class="spread-block">
+            <h4>Stack &amp; status</h4>
+            <div class="tag-list">
+              <span class="tag">[stack]</span>
+              <span class="tag">[status]</span>
             </div>
           </div>
-          <div class="plugin-content">
-            <div class="plugin-header">
-              <h3>Figma Navigation</h3>
-              <span class="plugin-status placeholder-text">[status]</span>
-            </div>
-            <p class="plugin-tagline placeholder-text">[PLACEHOLDER — frase curta de uma linha sobre o que o plugin faz]</p>
+          <div class="spread-actions">
+            <a class="btn-circle" href="#">Ver plugin →</a>
+            <a class="text-link" href="#">Código-fonte</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="plugin-block">
-              <h4>A ideia</h4>
-              <p class="placeholder-text">[PLACEHOLDER — o que te fez criar esse plugin? que problema de navegação/organização no Figma ele resolve?]</p>
-            </div>
-
-            <div class="plugin-block">
-              <h4>O desenvolvimento</h4>
-              <p class="placeholder-text">[PLACEHOLDER — como foi construído, principais desafios, decisões técnicas]</p>
-            </div>
-
-            <div class="plugin-block">
-              <h4>Stack &amp; status</h4>
-              <div class="tag-list">
-                <span class="tag">[stack]</span>
-                <span class="tag">[status]</span>
-              </div>
-            </div>
-
-            <div class="plugin-links">
-              <a href="#">Ver no Figma Community →</a>
-              <a href="#">Código-fonte →</a>
+    <!-- ============ SPREAD 2 — FigLens ============ -->
+    <section class="panel panel--light" id="figlens">
+      <div class="rail">
+        <span class="tick" aria-hidden="true"></span>
+        <span>Plugin 02 / 03</span>
+      </div>
+      <div class="spread spread--reverse" data-reveal>
+        <div class="spread-media">
+          <div class="frame">imagem/gif em breve</div>
+          <span class="project-tag">Plugin // FigLens</span>
+        </div>
+        <div class="spread-content">
+          <h3>O que é o <em>FigLens</em> e qual o desafio?</h3>
+          <div class="spread-block">
+            <h4>A ideia</h4>
+            <p class="placeholder-text">[PLACEHOLDER — o que te fez criar esse plugin? que "lente"/inspeção ele oferece sobre os arquivos?]</p>
+          </div>
+          <div class="spread-block">
+            <h4>O desenvolvimento</h4>
+            <p class="placeholder-text">[PLACEHOLDER — como foi construído, principais desafios, decisões técnicas]</p>
+          </div>
+          <div class="spread-block">
+            <h4>Stack &amp; status</h4>
+            <div class="tag-list">
+              <span class="tag">[stack]</span>
+              <span class="tag">[status]</span>
             </div>
           </div>
-        </article>
+          <div class="spread-actions">
+            <a class="btn-circle" href="#">Ver plugin →</a>
+            <a class="text-link" href="#">Código-fonte</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- ===================== PLUGIN 2 — FigLens ===================== -->
-        <article class="plugin-card" data-plugin="figlens">
-          <div class="plugin-media">
-            <!-- TODO: substituir por <img src="./assets/img/figlens.png" alt="..."> quando tiver o print -->
-            <div class="placeholder-label">
-              <strong>FigLens</strong>
-              imagem/gif em breve
+    <!-- ============ SPREAD 3 — Json to Layout ============ -->
+    <section class="panel panel--dark" id="json-to-layout">
+      <div class="rail">
+        <span class="tick" aria-hidden="true"></span>
+        <span>Plugin 03 / 03</span>
+      </div>
+      <div class="spread" data-reveal>
+        <div class="spread-media">
+          <div class="frame">imagem/gif em breve</div>
+          <span class="project-tag">Plugin // Json to Layout</span>
+        </div>
+        <div class="spread-content">
+          <h3>O que é o <em>Json to Layout</em> e qual o desafio?</h3>
+          <div class="spread-block">
+            <h4>A ideia</h4>
+            <p class="placeholder-text">[PLACEHOLDER — que dor de popular telas com dados reais/mockados esse plugin resolve?]</p>
+          </div>
+          <div class="spread-block">
+            <h4>O desenvolvimento</h4>
+            <p class="placeholder-text">[PLACEHOLDER — como foi construído, principais desafios, decisões técnicas]</p>
+          </div>
+          <div class="spread-block">
+            <h4>Stack &amp; status</h4>
+            <div class="tag-list">
+              <span class="tag">[stack]</span>
+              <span class="tag">[status]</span>
             </div>
           </div>
-          <div class="plugin-content">
-            <div class="plugin-header">
-              <h3>FigLens</h3>
-              <span class="plugin-status placeholder-text">[status]</span>
-            </div>
-            <p class="plugin-tagline placeholder-text">[PLACEHOLDER — frase curta de uma linha sobre o que o plugin faz]</p>
-
-            <div class="plugin-block">
-              <h4>A ideia</h4>
-              <p class="placeholder-text">[PLACEHOLDER — o que te fez criar esse plugin? que "lente"/inspeção ele oferece sobre os arquivos?]</p>
-            </div>
-
-            <div class="plugin-block">
-              <h4>O desenvolvimento</h4>
-              <p class="placeholder-text">[PLACEHOLDER — como foi construído, principais desafios, decisões técnicas]</p>
-            </div>
-
-            <div class="plugin-block">
-              <h4>Stack &amp; status</h4>
-              <div class="tag-list">
-                <span class="tag">[stack]</span>
-                <span class="tag">[status]</span>
-              </div>
-            </div>
-
-            <div class="plugin-links">
-              <a href="#">Ver no Figma Community →</a>
-              <a href="#">Código-fonte →</a>
-            </div>
+          <div class="spread-actions">
+            <a class="btn-circle" href="#">Ver plugin →</a>
+            <a class="text-link" href="#">Código-fonte</a>
           </div>
-        </article>
-
-        <!-- ===================== PLUGIN 3 — Json to Layout ===================== -->
-        <article class="plugin-card" data-plugin="json-to-layout">
-          <div class="plugin-media">
-            <!-- TODO: substituir por <img src="./assets/img/json-to-layout.png" alt="..."> quando tiver o print -->
-            <div class="placeholder-label">
-              <strong>Json to Layout</strong>
-              imagem/gif em breve
-            </div>
-          </div>
-          <div class="plugin-content">
-            <div class="plugin-header">
-              <h3>Json to Layout</h3>
-              <span class="plugin-status placeholder-text">[status]</span>
-            </div>
-            <p class="plugin-tagline placeholder-text">[PLACEHOLDER — frase curta de uma linha, ex: gera camadas/layouts no Figma a partir de um JSON]</p>
-
-            <div class="plugin-block">
-              <h4>A ideia</h4>
-              <p class="placeholder-text">[PLACEHOLDER — que dor de popular telas com dados reais/mockados esse plugin resolve?]</p>
-            </div>
-
-            <div class="plugin-block">
-              <h4>O desenvolvimento</h4>
-              <p class="placeholder-text">[PLACEHOLDER — como foi construído, principais desafios, decisões técnicas]</p>
-            </div>
-
-            <div class="plugin-block">
-              <h4>Stack &amp; status</h4>
-              <div class="tag-list">
-                <span class="tag">[stack]</span>
-                <span class="tag">[status]</span>
-              </div>
-            </div>
-
-            <div class="plugin-links">
-              <a href="#">Ver no Figma Community →</a>
-              <a href="#">Código-fonte →</a>
-            </div>
-          </div>
-        </article>
-
+        </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="site-footer" id="contato">
-    <div class="wrap">
-      <p>Rodrigo Alves — Design + Código</p>
-      <div class="footer-links">
+  <footer class="panel panel--dark site-footer" id="contato">
+    <div class="wrap" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:24px; width:100%;">
+      <span class="mark">Rodrigo Alves</span>
+      <div class="links">
         <!-- TODO: preencher com os links reais -->
         <a href="#">GitHub</a>
         <a href="#">LinkedIn</a>

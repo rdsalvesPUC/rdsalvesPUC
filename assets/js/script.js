@@ -1,12 +1,12 @@
-// Reveal plugin cards as they enter the viewport.
-// Progressive enhancement: cards are visible by default in CSS. Only once we
-// know IntersectionObserver works do we opt a card into the hidden starting
-// state, right before observing it — so a slow or failed script never leaves
-// content invisible.
+// Reveal sections as they enter the viewport.
+// Progressive enhancement: everything is visible by default in CSS. Only once
+// we know IntersectionObserver works do we opt an element into the hidden
+// starting state, right before observing it — so a slow or failed script
+// never leaves content invisible.
 (function () {
-  var cards = document.querySelectorAll(".plugin-card");
+  var targets = document.querySelectorAll("[data-reveal]");
 
-  if (!("IntersectionObserver" in window) || cards.length === 0) {
+  if (!("IntersectionObserver" in window) || targets.length === 0) {
     return;
   }
 
@@ -19,11 +19,11 @@
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.12 }
   );
 
-  cards.forEach(function (card) {
-    card.classList.add("reveal-ready");
-    observer.observe(card);
+  targets.forEach(function (el) {
+    el.classList.add("reveal-ready");
+    observer.observe(el);
   });
 })();
