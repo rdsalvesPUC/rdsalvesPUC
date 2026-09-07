@@ -1,0 +1,395 @@
+/* ==========================================================================
+   Rodrigo Alves — Coleção de Criações (Figma Plugins)
+   Design system: portfólio de designer, tom escuro e caloroso.
+   ========================================================================== */
+
+:root {
+  --bg: #121110;
+  --bg-raised: #1b1917;
+  --bg-card: #1f1c19;
+  --border: #322d27;
+  --text: #f5f1ea;
+  --text-muted: #b8b0a4;
+  --text-faint: #7d766a;
+  --accent: #e2793d;
+  --accent-soft: rgba(226, 121, 61, 0.14);
+  --accent-text: #f5a366;
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --max-width: 1040px;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(18, 17, 16, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.brand {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.brand span {
+  color: var(--accent-text);
+}
+
+.site-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 96px 0 72px;
+  border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-text);
+  background: var(--accent-soft);
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin: 0 0 22px;
+  max-width: 18ch;
+}
+
+.hero p.lede {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 58ch;
+  margin: 0;
+}
+
+/* ---------- Intro / about the collection ---------- */
+
+.intro {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+}
+
+.intro h2 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.intro-body p {
+  color: var(--text-muted);
+  margin: 0 0 16px;
+}
+
+.intro-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Plugins section ---------- */
+
+.plugins {
+  padding: 72px 0 96px;
+}
+
+.plugins > .wrap > h2 {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  margin: 0 0 8px;
+}
+
+.plugins > .wrap > .section-sub {
+  color: var(--text-muted);
+  margin: 0 0 48px;
+  max-width: 60ch;
+}
+
+.plugin-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: start;
+  padding: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 32px;
+}
+
+/* Reveal-on-scroll is progressive enhancement: JS opts elements into the
+   hidden starting state right before observing them, so content stays
+   visible by default if JS fails, is slow, or is disabled. */
+.plugin-card.reveal-ready {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.plugin-card.reveal-ready.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.plugin-media {
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+  border: 1px dashed var(--border);
+  background: linear-gradient(135deg, var(--bg-raised), var(--bg));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.plugin-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.plugin-media .placeholder-label {
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  text-align: center;
+  padding: 0 20px;
+}
+
+.plugin-media .placeholder-label strong {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.plugin-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.plugin-header h3 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.plugin-status {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-text);
+  white-space: nowrap;
+}
+
+.plugin-tagline {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin: 0 0 22px;
+}
+
+.plugin-block {
+  margin-bottom: 18px;
+}
+
+.plugin-block:last-of-type {
+  margin-bottom: 22px;
+}
+
+.plugin-block h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  margin: 0 0 6px;
+}
+
+.plugin-block p {
+  margin: 0;
+  color: var(--text);
+}
+
+.plugin-block p.placeholder-text {
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.tag {
+  font-size: 0.76rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.plugin-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.plugin-links a {
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: var(--accent-text);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.plugin-links a:hover {
+  border-color: var(--accent-text);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+}
+
+.site-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--text-faint);
+  font-size: 0.86rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 780px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .plugin-card {
+    grid-template-columns: 1fr;
+    padding: 26px;
+  }
+
+  .site-nav {
+    gap: 18px;
+  }
+
+  .hero {
+    padding: 64px 0 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-nav a:nth-child(3) {
+    display: none;
+  }
+}
