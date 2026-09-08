@@ -168,6 +168,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
   padding: 22px var(--gutter);
   mix-blend-mode: difference;
   color: #fff;
@@ -179,13 +180,41 @@ a {
 .site-nav a {
   text-decoration: none;
   color: inherit;
-  margin-left: 28px;
+}
+
+.site-nav .nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.site-nav .nav-links a {
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav .nav-links a:hover {
+  border-bottom-color: currentColor;
+}
+
+.site-nav .nav-links a[aria-current="page"] {
+  border-bottom-color: currentColor;
 }
 
 .site-nav .brand {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+@media (max-width: 620px) {
+  .site-nav {
+    font-size: 0.74rem;
+    padding: 16px var(--gutter);
+  }
+  .site-nav .nav-links {
+    gap: 16px;
+  }
 }
 
 /* ---------- Panels (full-bleed alternating sections) ---------- */
@@ -651,4 +680,429 @@ a {
 .reveal-ready.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ==========================================================================
+   v3 — multipage additions
+   ========================================================================== */
+
+/* ---------- Page hero (secondary pages) ---------- */
+
+.page-hero {
+  min-height: 62vh;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 140px;
+  padding-bottom: 64px;
+}
+
+.page-hero h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2.8rem, 8vw, 5.4rem);
+  line-height: 0.98;
+  margin: 0 0 20px;
+}
+
+.page-hero h1 em {
+  font-style: italic;
+}
+
+.page-hero .lede {
+  font-size: 1.08rem;
+  max-width: 54ch;
+  opacity: 0.75;
+  margin: 0;
+}
+
+/* ---------- Home: name lockup ---------- */
+
+.lockup h1 {
+  font-family: var(--sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: clamp(2.4rem, 7.5vw, 5.2rem);
+  line-height: 1.02;
+  letter-spacing: 0.14em;
+  margin: 0 0 18px;
+}
+
+@media (max-width: 620px) {
+  .lockup h1 {
+    letter-spacing: 0.06em;
+  }
+}
+
+/* ---------- Nav cards (home index) ---------- */
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.panel--dark .nav-grid {
+  border-top-color: var(--line-on-dark);
+  border-left-color: var(--line-on-dark);
+}
+
+.nav-card {
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 36px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 230px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.25s ease;
+}
+
+.panel--dark .nav-card {
+  border-right-color: var(--line-on-dark);
+  border-bottom-color: var(--line-on-dark);
+}
+
+.nav-card:hover {
+  background: var(--paper-dim);
+}
+
+.panel--dark .nav-card:hover {
+  background: rgba(251, 250, 248, 0.05);
+}
+
+.nav-card .num {
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  opacity: 0.45;
+}
+
+.nav-card h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+.nav-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  opacity: 0.65;
+  flex-grow: 1;
+}
+
+.nav-card .go {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+
+.nav-card .go .icon {
+  width: 1.6em;
+  height: 0.7em;
+}
+
+@media (max-width: 860px) {
+  .nav-grid {
+    grid-template-columns: 1fr;
+  }
+  .nav-card {
+    min-height: 0;
+  }
+}
+
+/* ---------- Client logo grid ---------- */
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.logo-cell {
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  aspect-ratio: 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+}
+
+.logo-cell img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.75;
+  transition: opacity 0.25s ease;
+  /* os PNGs vêm do PDF com fundo branco opaco; multiply "apaga" esse fundo
+     contra o papel off-white em vez de deixar caixinhas brancas visíveis.
+     Só funciona sobre fundo claro — a grade de logos só aparece em painéis claros. */
+  mix-blend-mode: multiply;
+}
+
+.logo-cell:hover img {
+  opacity: 1;
+}
+
+@media (max-width: 860px) {
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Spread media with real images ---------- */
+
+.spread-media.has-image {
+  padding: 0;
+  background: var(--ink);
+}
+
+.spread-media.has-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  object-fit: cover;
+}
+
+.spread-extra {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.spread-extra figure {
+  margin: 0;
+}
+
+.spread-extra img {
+  width: 100%;
+  border: 1px solid var(--line);
+}
+
+.panel--dark .spread-extra img {
+  border-color: var(--line-on-dark);
+}
+
+.spread-extra figcaption {
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-top: 8px;
+}
+
+.spread-note {
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 0.84rem;
+  opacity: 0.55;
+  max-width: 52ch;
+}
+
+.panel--dark .spread-note {
+  border-top-color: var(--line-on-dark);
+}
+
+.spread-note strong {
+  display: block;
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 6px;
+}
+
+/* work screenshot inside content column */
+.work-shot {
+  margin: 0 0 26px;
+}
+
+.work-shot img {
+  width: 100%;
+  border: 1px solid var(--line);
+}
+
+.panel--dark .work-shot img {
+  border-color: var(--line-on-dark);
+}
+
+/* ---------- CV ---------- */
+
+.cv-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.7fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.cv-side section {
+  margin-bottom: 34px;
+}
+
+.cv-side h2 {
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin: 0 0 12px;
+  font-weight: 400;
+  font-family: var(--sans);
+}
+
+.cv-side ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-side li {
+  font-size: 0.92rem;
+  padding: 3px 0;
+  opacity: 0.8;
+}
+
+.cv-side a {
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+
+.cv-main h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin: 0 0 32px;
+}
+
+.cv-main h2 em {
+  font-style: italic;
+}
+
+.cv-main h2 + .cv-entry {
+  border-top: 1px solid var(--line);
+}
+
+.cv-entry {
+  border-bottom: 1px solid var(--line);
+  padding: 26px 0;
+}
+
+.cv-entry .role-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.cv-entry h3 {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.cv-entry .period {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+  white-space: nowrap;
+}
+
+.cv-entry .role {
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin: 0 0 12px;
+}
+
+.cv-entry p {
+  margin: 0 0 10px;
+  max-width: 62ch;
+  font-size: 0.95rem;
+}
+
+.cv-entry ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  max-width: 62ch;
+}
+
+.cv-entry li {
+  font-size: 0.92rem;
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
+.cv-entry.is-placeholder {
+  border-left: 2px solid var(--coral);
+  padding-left: 20px;
+}
+
+.cv-section + .cv-section {
+  margin-top: 64px;
+}
+
+@media (max-width: 860px) {
+  .cv-layout {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+}
+
+/* ---------- Closing / contact ---------- */
+
+.closing {
+  text-align: center;
+  padding: 120px 0;
+}
+
+.closing h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 4vw, 2.9rem);
+  margin: 0 0 14px;
+}
+
+.closing p {
+  margin: 0 0 40px;
+  opacity: 0.7;
+}
+
+.btn-box {
+  display: inline-block;
+  border: 1px solid currentColor;
+  padding: 20px 44px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.panel--light .btn-box:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.panel--dark .btn-box:hover {
+  background: var(--paper);
+  color: var(--ink);
 }
