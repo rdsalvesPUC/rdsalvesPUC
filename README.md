@@ -1,42 +1,27 @@
-# apple-academy-collection
+<p align="center">
+  <a href="https://rdsalvespuc.github.io/rdsalvesPUC/">
+    <img src="assets/img/profile-banner.png" alt="Rodrigo Alves — UX Designer & Developer — onde o design encontra o código" />
+  </a>
+</p>
 
-Site estático de uma página com a "Coleção de criações" para a inscrição na Apple Developer Academy PUCPR — mostrando três plugins de Figma feitos por Rodrigo Alves como ferramentas pessoais de fluxo de trabalho.
+<p align="center">
+  <a href="https://rdsalvespuc.github.io/rdsalvesPUC/"><b>Site</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://rdsalvespuc.github.io/rdsalvesPUC/portfolio.html">Portfólio</a>
+  &nbsp;·&nbsp;
+  <a href="https://rdsalvespuc.github.io/rdsalvesPUC/colecao.html">Coleção</a>
+  &nbsp;·&nbsp;
+  <a href="https://rdsalvespuc.github.io/rdsalvesPUC/cv.html">CV</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/rdsalves">LinkedIn</a>
+</p>
 
-## Estrutura
+---
 
-```
-index.html
-assets/
-  css/style.css
-  js/script.js
-  img/            ← coloque aqui os prints/gifs dos plugins
-.nojekyll         ← evita que o GitHub processe o site com Jekyll
-```
+**UX Designer há 15 anos, desenvolvedor por escolha.** Projetei produtos digitais
+centrados no usuário para clientes como Grupo Casas Bahia, Rede D'Or, FGV, Americanas,
+Coca-Cola e e-Bricks Ventures. Hoje curso a minha segunda graduação — Sistemas de
+Informação na PUCPR — unindo design e código no mesmo lugar.
 
-O site usa apenas caminhos relativos, então funciona tanto localmente quanto publicado em `https://rdsalvesPUC.github.io/apple-academy-collection/`.
-
-## Como publicar no GitHub Pages
-
-1. Copie todos os arquivos deste pacote para a raiz do repositório `rdsalvesPUC/apple-academy-collection` (mantendo a estrutura de pastas).
-2. Faça commit e push para a branch `main`.
-3. No GitHub, vá em **Settings → Pages**.
-4. Em "Build and deployment", escolha **Deploy from a branch**.
-5. Selecione a branch `main` e a pasta `/ (root)`.
-6. Salve. Em alguns minutos o site fica disponível em:
-   `https://rdsalvesPUC.github.io/apple-academy-collection/`
-7. Use essa URL no link de "coleção de criações" da inscrição.
-
-## O que falta preencher
-
-Todo texto placeholder está marcado com `[PLACEHOLDER — ...]` no `index.html` (e em itálico na página, para ficar visualmente óbvio). Para cada plugin (Figma Navigation, FigLens, Json to Layout) falta:
-
-- Tagline de uma linha
-- Texto de "A ideia"
-- Texto de "O desenvolvimento"
-- Tags de stack e status (ex: `Figma Plugin API`, `TypeScript`, `Uso pessoal` / `Publicado`)
-- Imagem/gif em `assets/img/` (basta trocar o bloco `.plugin-media` pelo `<img>` — o comentário `TODO` já indica onde)
-- Links reais de Figma Community / código-fonte
-- Texto de abertura em "Por que plugins?"
-- Links do rodapé (GitHub, LinkedIn, Figma)
-
-Assim que você mandar esse conteúdo, é só eu atualizar o `index.html` — a estrutura e o design já estão prontos.
+👉 **[Conheça o meu trabalho](https://rdsalvespuc.github.io/rdsalvesPUC/)** — portfólio,
+coleção de criações e currículo.
