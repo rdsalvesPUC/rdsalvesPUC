@@ -943,7 +943,7 @@ a {
 
 .cv-layout {
   display: grid;
-  grid-template-columns: 0.8fr 1.7fr;
+  grid-template-columns: max-content 1fr;
   gap: 72px;
   align-items: start;
 }
@@ -1034,14 +1034,14 @@ a {
 
 .cv-entry p {
   margin: 0 0 10px;
-  max-width: 62ch;
+  max-width: 78ch;
   font-size: 0.95rem;
 }
 
 .cv-entry ul {
   margin: 10px 0 0;
   padding-left: 18px;
-  max-width: 62ch;
+  max-width: 78ch;
 }
 
 .cv-entry li {
