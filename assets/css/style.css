@@ -109,7 +109,7 @@ a {
 }
 
 .wrap {
-  max-width: 1180px;
+  max-width: 1366px;
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
