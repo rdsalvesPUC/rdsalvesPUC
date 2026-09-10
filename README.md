@@ -7,11 +7,11 @@
 <p align="center">
   <a href="https://rdsalvespuc.github.io/rdsalvesPUC/"><b>Site</b></a>
   &nbsp;·&nbsp;
+  <a href="https://rdsalvespuc.github.io/rdsalvesPUC/cv.html">Currículo</a>
+  &nbsp;·&nbsp;
   <a href="https://rdsalvespuc.github.io/rdsalvesPUC/portfolio.html">Portfólio</a>
   &nbsp;·&nbsp;
   <a href="https://rdsalvespuc.github.io/rdsalvesPUC/colecao.html">Coleção</a>
-  &nbsp;·&nbsp;
-  <a href="https://rdsalvespuc.github.io/rdsalvesPUC/cv.html">CV</a>
   &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/rdsalves">LinkedIn</a>
 </p>
