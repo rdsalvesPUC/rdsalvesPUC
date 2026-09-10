@@ -7,35 +7,46 @@ Site estático do Rodrigo Alves, feito para a inscrição no processo seletivo d
 > um de **portfólio de projetos** e um de **coleção de criações** (hobbies e
 > trabalhos criativos). O site multipage atende os dois com URLs distintas.
 
-Publicação: GitHub Pages em `https://rdsalvesPUC.github.io/apple-academy-collection/`
-(repo de projeto, então **todos os caminhos são relativos** — nada de `/assets/...`
-com barra inicial, senão quebra em produção).
+Publicação: **no ar** via GitHub Pages em `https://rdsalvespuc.github.io/rdsalvesPUC/`
+(**todos os caminhos são relativos** — nada de `/assets/...` com barra inicial, senão
+quebra em produção).
+
+> **O repo foi renomeado para `rdsalvesPUC` (= nome de usuário do GitHub).** Com isso
+> ele é, de propósito, um hub único (decisão "Opção B"): ao mesmo tempo (1) o **repo
+> especial de perfil** — o `README.md` dele renderiza como banner no topo de
+> github.com/rdsalvesPUC — e (2) **hospeda o site** via Pages. Por isso a URL do site
+> repete o nome do repo (`.../rdsalvesPUC/`). O remote local aponta para
+> `rdsalvesPUC.git`.
 
 ---
 
 ## Branches
 
-Três direções de layout, empilhadas linearmente sobre a `main`. Todas já no `origin`.
+As três direções de layout continuam no `origin` como histórico. **A v3 foi eleita
+como a versão final e mesclada na `main`** (fast-forward) — é ela que está no ar.
 
 | Branch | O que é |
 |---|---|
-| `main` | Só o commit inicial (LICENSE + README do GitHub). Nenhum layout mesclado ainda. |
-| `layout-v1-portfolio` | v1 — página única, tema escuro, cards empilhados. Fontes do Google Fonts. |
-| `layout-v2-editorial` | v2 — página única, identidade visual real do portfólio do Rodrigo (ArgentCF + Moderat, preto/branco/coral). |
-| `layout-v3-multipage` | v3 — **branch mais avançada.** Site multipage: home, portfólio, coleção e CV. |
+| `main` | **A versão publicada.** v3 (fast-forward) + banner de perfil. É daqui que o Pages e o README de perfil são servidos. |
+| `layout-v3-multipage` | v3 — site multipage (home, portfólio, coleção, CV). **Direção escolhida**; espelha a `main`. |
+| `layout-v2-editorial` | v2 — página única, identidade editorial. Alternativa histórica, não usada. |
+| `layout-v1-portfolio` | v1 — página única, tema escuro, fontes do Google Fonts. Alternativa histórica, não usada. |
 
-Nenhuma decisão final foi tomada sobre qual direção seguir. Quando decidir,
-mesclar a escolhida na `main` (o GitHub Pages serve a partir de `main` / root).
+**Fluxo de trabalho (importante — pedido do Rodrigo):** não commitar direto na `main`.
+Trabalhar numa branch (ex.: `content-fixes`), mostrar o `git diff`, e mesclar na `main`
+só com o ok dele. Antes de cada edição, avaliar se ela encosta em layout/CSS — se
+encostar, ou na dúvida, **perguntar antes**. Preservar o trabalho (versionar sempre).
 
 ---
 
-## Estrutura (v3)
+## Estrutura
 
 ```
 index.html          Home — "Quem eu sou" + navegação para as 3 seções
 portfolio.html      10 projetos de cliente (conteúdo e imagens do PDF original)
 colecao.html        Plugins de Figma (é o link da "coleção de criações" do edital)
 cv.html             Currículo completo
+README.md           Banner clicável do perfil (renderiza em github.com/rdsalvesPUC) → site
 assets/
   css/style.css     Design system inteiro, um arquivo só
   js/script.js      Reveal on scroll (progressive enhancement)
@@ -43,7 +54,22 @@ assets/
   icons/*.svg       Setas e "×" (não referenciados: os ícones estão inline no HTML)
   img/logos/        10 logos de cliente, 300x300 PNG
   img/projects/     21 imagens dos projetos, JPEG
+  img/profile-banner.png   Banner do perfil, 2560×880 PNG (ver abaixo)
 ```
+
+### Banner de perfil (`assets/img/profile-banner.png`)
+
+Imagem do banner que o `README.md` exibe (dentro de um link para o site). Feito na
+identidade do portfólio (fundo `--ink`, Moderat no nome, ArgentCF itálico na tagline,
+seta/"×"/"&" em coral). **É um PNG rasterizado** — não SVG — porque o GitHub não
+carrega `@font-face` custom em SVG de README, então o texto viraria fonte de sistema.
+
+Para regenerar: um HTML temporário (`_banner-preview.html`, na raiz, apagado depois)
+com o layout do banner e as fontes locais, servido por `python -m http.server`, é
+rasterizado com o Edge headless em 2×:
+`msedge --headless=new --force-device-scale-factor=2 --window-size=1280,440
+--screenshot=assets/img/profile-banner.png <url>`. (Fontes só carregam por HTTP, não
+por `file://`.)
 
 ## Design system
 
@@ -52,10 +78,13 @@ assets/
   (grotesca, corpo de texto, labels em caixa alta com tracking largo).
 - **Cores:** `--ink: #141414`, `--paper: #fbfaf8`, `--coral: #e8552e`.
 - **Padrões recorrentes:** painéis full-bleed alternando claro/escuro; `.rail`
-  (label rotacionado 90° na margem esquerda, com um tique vertical); grades com
-  borda de 1px; botão circular; tag `Client // Nome` sobre a imagem.
+  (label rotacionado 90° na margem esquerda, com um tique vertical **centralizado**
+  sobre o texto — `align-items: center`); grades com borda de 1px; botão circular;
+  tag `Client // Nome` sobre a imagem.
 - **Nav:** `position: fixed` com `mix-blend-mode: difference`, para funcionar
   sobre painéis claros e escuros sem trocar de cor.
+- **Rodapé:** os quatro são idênticos — `.links` com LinkedIn · GitHub · e-mail
+  (a navegação entre páginas fica por conta da nav fixa do topo).
 
 ### Duas armadilhas já resolvidas — não regredir
 
@@ -77,12 +106,14 @@ reduzida (`.placeholder-text`). Buscar por `PLACEHOLDER` e `TODO`.
 **`colecao.html` — o conteúdo dos plugins nunca chegou.** Os três plugins são
 **Figma Navigation**, **FigLens** e **Json to Layout**. Falta, para cada um:
 tagline, texto de "A ideia", texto de "O desenvolvimento", tags de stack/status,
-imagem (o Rodrigo tem print de só um deles) e os links reais. Falta também o
-texto de abertura "Por que plugins?".
+imagem (o Rodrigo tem print de só um deles) e os links reais (os botões "Ver plugin"
+e "Código-fonte" estão com `href="#"`). Falta também o texto de abertura "Por que
+plugins?".
 
 **`index.html`** — falta o parágrafo final do "Quem eu sou" (sugestão: momento
 atual, a segunda graduação em Sistemas de Informação na PUCPR, unir design e
-código — é o que conecta a home com a coleção).
+código — é o que conecta a home com a coleção, e casa com a tagline do banner
+"onde o design encontra o código").
 
 **`cv.html` — a Casas Bahia está como rascunho.** O CV de origem é de 2024 e não
 tem os últimos 4 anos. A entrada existe, marcada com borda coral
@@ -93,7 +124,13 @@ Ant Design. **Período e texto precisam ser confirmados por ele.**
 **`portfolio.html`** — os botões "Visit Site / Visit UX / Visit UI" estão com
 `href="#"`; as URLs reais nunca foram fornecidas.
 
-**Links do rodapé** — o GitHub está com `href="#"` em todas as páginas.
+### Já resolvido (não refazer)
+
+- **Link do GitHub no rodapé** — agora aponta para `github.com/rdsalvesPUC` em todas
+  as páginas (era `href="#"`).
+- **Rodapés padronizados** — os quatro iguais (LinkedIn · GitHub · e-mail).
+- **Travessão do `.rail`** — centralizado sobre o texto (era `align-items: flex-start`,
+  virou `center`), igual ao PDF de origem. Vale para o site e para o banner.
 
 ---
 
@@ -130,7 +167,7 @@ Ant Design. **Período e texto precisam ser confirmados por ele.**
 ## Como rodar
 
 ```bash
-python3 -m http.server 8000
+python -m http.server 8000
 # abrir http://localhost:8000
 ```
 
@@ -138,5 +175,11 @@ Não abrir via `file://` — as fontes `@font-face` não carregam por causa de C
 
 ## Publicar no GitHub Pages
 
-Settings → Pages → Deploy from a branch → `main` / `(root)`.
-O `.nojekyll` já está no repo (evita o processamento por Jekyll).
+Já configurado e no ar: Settings → Pages → Deploy from a branch → `main` / `(root)`.
+O `.nojekyll` já está no repo (evita o processamento por Jekyll). Um push na `main`
+republica o site automaticamente em ~1 min.
+
+> **Nota operacional:** de vez em quando a manutenção automática do git
+> (`git maintenance`) deixa `.git/*.lock` travados (ex.: `objects/maintenance.lock`),
+> o que faz comandos falharem com "index.lock exists". É benigno — apagar o lock
+> obsoleto e repetir. Não é o OneDrive.
