@@ -1055,6 +1055,45 @@ a {
   padding-left: 20px;
 }
 
+/* education entries with an institution logo on the right */
+.cv-entry.has-logo {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.cv-entry.has-logo .cv-entry-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.cv-entry .cv-logo {
+  flex-shrink: 0;
+  width: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cv-entry .cv-logo img {
+  max-width: 100%;
+  max-height: 76px;
+  width: auto;
+  filter: grayscale(1);
+  opacity: 0.65;
+  /* white/light backgrounds vanish against the light panel; only the mark shows */
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 480px) {
+  .cv-entry.has-logo {
+    gap: 18px;
+  }
+  .cv-entry .cv-logo {
+    width: 60px;
+  }
+}
+
 .cv-section + .cv-section {
   margin-top: 64px;
 }
