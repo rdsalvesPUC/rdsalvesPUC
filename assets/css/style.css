@@ -895,7 +895,7 @@ a {
   display: block;
 }
 
-.spread-media.has-image:has(.work-shot) {
+.spread-media.has-image:has(.work-shot):not(:has(.spread-extra)) {
   padding-bottom: 56px;
 }
 
@@ -925,6 +925,26 @@ a {
 .spread--reverse .spread-media.has-image .work-shot {
   right: auto;
   left: 0;
+}
+
+/* projects with extra images: hero + overlap grouped, extras in a row below */
+.spread-media.has-image .comp-hero {
+  position: relative;
+  padding-bottom: 56px;
+}
+
+.spread-media.has-image .comp-hero > img {
+  width: 88%;
+  height: auto;
+  display: block;
+}
+
+.spread--reverse .spread-media.has-image .comp-hero > img {
+  margin-left: auto;
+}
+
+.spread-media.has-image .spread-extra {
+  margin-top: 20px;
 }
 
 .spread-extra {
