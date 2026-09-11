@@ -927,6 +927,12 @@ a {
   left: 0;
 }
 
+/* image on the right (reverse) -> client tag on the right, clear of the overlap */
+.spread--reverse .spread-media.has-image .project-tag {
+  left: auto;
+  right: 40px;
+}
+
 /* projects with extra images: hero + overlap grouped, extras in a row below */
 .spread-media.has-image .comp-hero {
   position: relative;
