@@ -1,3 +1,11 @@
 Claude outputs/
 .DS_Store
 Thumbs.db
+
+# Originais / arquivos-fonte — nunca versionar (os originais moram no Dropbox, fora do repo)
+*.pdf
+*.ttf
+*.otf
+*.ai
+*.psd
+*.indd
