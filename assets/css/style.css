@@ -1127,7 +1127,7 @@ a {
 
 .cv-layout {
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: 15rem 1fr;
   gap: 72px;
   align-items: start;
 }
@@ -1177,10 +1177,9 @@ a {
   margin-top: 0;
 }
 
-/* chips de competência no sidebar: largura FIXA pra quebrarem dentro da coluna.
-   (max-width não segura o track max-content do grid; width sim.) */
+/* chips de competência no sidebar: preenchem a coluna (que agora é fixa) */
 .cv-side .tag-list {
-  width: 15rem;
+  width: 100%;
   margin-bottom: 4px;
 }
 .cv-side .tag {
