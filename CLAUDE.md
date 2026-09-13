@@ -42,10 +42,10 @@ encostar, ou na dúvida, **perguntar antes**. Preservar o trabalho (versionar se
 ## Estrutura
 
 ```
-index.html          Home — "Quem eu sou" + navegação para as 3 seções
-portfolio.html      10 projetos de cliente (conteúdo e imagens do PDF original)
-colecao.html        Plugins de Figma (é o link da "coleção de criações" do edital)
-cv.html             Currículo completo
+index.html          Home — conceito "onde o design encontra o código" ("Quem eu sou" + navegação)
+portfolio.html      10 projetos de cliente (Rede D'Or e FGV com multi-entrega; links reais)
+colecao.html        Coleção de criações (edital) — 3 plugins de Figma; conteúdo ainda placeholder
+cv.html             Currículo — competências em chips (design/dev) com keywords de ATS
 README.md           Banner clicável do perfil (renderiza em github.com/rdsalvesPUC) → site
 assets/
   css/style.css     Design system inteiro, um arquivo só
@@ -103,34 +103,43 @@ por `file://`.)
 Marcado no HTML como `[PLACEHOLDER — ...]` e, na página, em itálico com opacidade
 reduzida (`.placeholder-text`). Buscar por `PLACEHOLDER` e `TODO`.
 
-**`colecao.html` — o conteúdo dos plugins nunca chegou.** Os três plugins são
-**Figma Navigation**, **FigLens** e **Json to Layout**. Falta, para cada um:
-tagline, texto de "A ideia", texto de "O desenvolvimento", tags de stack/status,
-imagem (o Rodrigo tem print de só um deles) e os links reais (os botões "Ver plugin"
-e "Código-fonte" estão com `href="#"`). Falta também o texto de abertura "Por que
-plugins?".
-
-**`index.html`** — falta o parágrafo final do "Quem eu sou" (sugestão: momento
-atual, a segunda graduação em Sistemas de Informação na PUCPR, unir design e
-código — é o que conecta a home com a coleção, e casa com a tagline do banner
-"onde o design encontra o código").
-
-**`cv.html` — a Casas Bahia está como rascunho.** O CV de origem é de 2024 e não
-tem os últimos 4 anos. A entrada existe, marcada com borda coral
-(`.cv-entry.is-placeholder`), escrita a partir do que o Rodrigo contou: sistemas
-logísticos, migração do IBM PCON de plataforma alta para baixa, React + Java +
-Ant Design. **Período e texto precisam ser confirmados por ele.**
-
-**`portfolio.html`** — os botões "Visit Site / Visit UX / Visit UI" estão com
-`href="#"`; as URLs reais nunca foram fornecidas.
+**`colecao.html` — o conteúdo dos plugins nunca chegou. É o único placeholder que
+resta no site.** Os três plugins são **Figma Navigation**, **FigLens** e **Json to
+Layout**. Falta, para cada um: tagline, texto de "A ideia", texto de "O
+desenvolvimento", tags de stack/status, imagem (o Rodrigo tem print de só um deles)
+e os links reais (os botões "Ver plugin" e "Código-fonte" estão com `href="#"`).
+Falta também o texto de abertura "Por que plugins?".
 
 ### Já resolvido (não refazer)
 
-- **Link do GitHub no rodapé** — agora aponta para `github.com/rdsalvesPUC` em todas
-  as páginas (era `href="#"`).
+- **Home reconceituada** — saiu da transcrição do PDF antigo para o conceito
+  "onde o design encontra o código" (rail/eyebrow/tagline em PT). "Quem eu sou"
+  reescrito (bolsa ProUni, Allos (brMalls), ponte design+código, 2ª graduação em
+  SI na PUCPR); o parágrafo final que era placeholder foi eliminado.
+- **CV — Casas Bahia (era rascunho)** — reescrita a partir do relato do Rodrigo:
+  Asap Log → app do entregador (Android) → integração com as Casas Bahia → TMS
+  interno → liderança de design na modernização do mainframe (**IBM PCOMM**, React
+  + Java, Ant Design) → promoção a Especialista em Design. Período confirmado
+  (Dez 2022 — Ago 2026). A borda coral virou a classe semântica
+  `.cv-entry.is-current` (destaque do cargo atual, não mais "rascunho").
+- **CV — competências em chips** — viraram chips de **texto** (ATS/crawler leem),
+  em dois grupos: Design (tinta) e Desenvolvimento (coral, `.tag--dev`). A lista de
+  dev veio da varredura do GitHub do Rodrigo. Keywords de ATS (DesignOps, Design
+  System, Design Tokens, WCAG, stakeholder management, OKRs…) entraram nos chips e
+  **em contexto** nos textos das duas últimas empresas (Casas Bahia e brMalls).
+  O sidebar do CV passou de `max-content` para **coluna fixa de 15rem** (o hug
+  estourava com os chips).
+- **Portfólio** — composição "Direção B" (imagem/texto sobrepostos), Rede D'Or e
+  FGV como projetos multi-entrega (seção "Entregas"), links reais de protótipo/site
+  e logos do topo clicáveis (âncoras para cada cliente).
+- **Travessões em texto corrido** — removidos da home e do CV (vírgula/parênteses).
+  Os separadores estéticos (datas "Jan — Jun", títulos, "Paraná — Brasil", banner)
+  são mantidos de propósito.
+- **Link do GitHub no rodapé** — aponta para `github.com/rdsalvesPUC` em todas as
+  páginas (era `href="#"`).
 - **Rodapés padronizados** — os quatro iguais (LinkedIn · GitHub · e-mail).
-- **Travessão do `.rail`** — centralizado sobre o texto (era `align-items: flex-start`,
-  virou `center`), igual ao PDF de origem. Vale para o site e para o banner.
+- **Travessão do `.rail`** — centralizado sobre o texto (`align-items: center`),
+  igual ao PDF de origem. Vale para o site e para o banner.
 
 ---
 
