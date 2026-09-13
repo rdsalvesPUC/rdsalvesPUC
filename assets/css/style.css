@@ -917,6 +917,19 @@ a {
   width: 100%;
 }
 
+/* screenshots de plugin (Coleção): moldura leve pra não flutuarem no painel.
+   hairline nos painéis escuros; borda + sombra suave no painel claro. */
+.spread-media.has-image > img.plugin-shot {
+  border-radius: 8px;
+}
+.panel--dark .spread-media.has-image > img.plugin-shot {
+  border: 1px solid var(--line-on-dark);
+}
+.panel--light .spread-media.has-image > img.plugin-shot {
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 44px rgba(20, 20, 20, 0.14);
+}
+
 .spread-media.has-image .work-shot {
   position: absolute;
   right: 0;
