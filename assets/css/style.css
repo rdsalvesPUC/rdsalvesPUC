@@ -1258,7 +1258,9 @@ a {
   opacity: 0.85;
 }
 
-.cv-entry.is-placeholder {
+/* barra coral: rascunho a confirmar, ou destaque do cargo atual */
+.cv-entry.is-placeholder,
+.cv-entry.is-current {
   border-left: 2px solid var(--coral);
   padding-left: 20px;
 }
