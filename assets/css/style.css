@@ -568,6 +568,12 @@ a {
   border-color: var(--line-on-dark);
 }
 
+/* dev-coded chip: coral outline (design em tinta, desenvolvimento em coral) */
+.tag--dev {
+  border-color: var(--coral);
+  color: var(--coral);
+}
+
 .btn-circle {
   width: 118px;
   height: 118px;
@@ -1155,6 +1161,31 @@ a {
 .cv-side a {
   text-decoration: none;
   border-bottom: 1px solid var(--line);
+}
+
+/* sub-rótulo dentro de uma seção do sidebar (ex.: Design / Desenvolvimento) */
+.cv-subhead {
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.55;
+  margin: 16px 0 8px;
+}
+.cv-subhead:first-of-type {
+  margin-top: 0;
+}
+
+/* chips de competência no sidebar: largura FIXA pra quebrarem dentro da coluna.
+   (max-width não segura o track max-content do grid; width sim.) */
+.cv-side .tag-list {
+  width: 15rem;
+  margin-bottom: 4px;
+}
+.cv-side .tag {
+  font-size: 0.7rem;
+  padding: 4px 10px;
 }
 
 .cv-main h2 {
