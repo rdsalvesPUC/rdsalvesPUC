@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rodrigo Alves — Coleção de Criações</title>
-  <meta name="description" content="A coleção de criações pessoais de Rodrigo Alves — de ferramentas para o próprio fluxo de trabalho a experimentos e outros hobbies." />
+  <title data-en="Rodrigo Alves — Collection of Creations">Rodrigo Alves — Coleção de Criações</title>
+  <meta name="description" data-en="Rodrigo Alves' personal creations — from tools for his own workflow to experiments and other hobbies." content="A coleção de criações pessoais de Rodrigo Alves — de ferramentas para o próprio fluxo de trabalho a experimentos e outros hobbies." />
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
@@ -12,9 +12,13 @@
   <nav class="site-nav">
     <a href="./index.html" class="brand">Rodrigo Alves</a>
     <div class="nav-links">
-      <a href="./cv.html">Currículo</a>
-      <a href="./portfolio.html">Portfólio</a>
-      <a href="./colecao.html" aria-current="page">Coleção</a>
+      <a href="./cv.html" data-en="Résumé">Currículo</a>
+      <a href="./portfolio.html" data-en="Portfolio">Portfólio</a>
+      <a href="./colecao.html" aria-current="page" data-en="Collection">Coleção</a>
+      <span class="lang-switch" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang-set="pt" aria-pressed="true">PT</button>
+        <button type="button" data-lang-set="en" aria-pressed="false">EN</button>
+      </span>
     </div>
   </nav>
 
@@ -24,11 +28,11 @@
     <section class="panel panel--dark page-hero">
       <div class="rail">
         <span class="tick" aria-hidden="true"></span>
-        <span>Coleção de criações — 2026</span>
+        <span data-en="Collection of creations — 2026">Coleção de criações — 2026</span>
       </div>
       <div class="wrap">
-        <h1>Cole<em>ção</em></h1>
-        <p class="lede">Coisas que eu crio por conta própria, por pura curiosidade: de ferramentas
+        <h1 data-en="Collec<em>tion</em>">Cole<em>ção</em></h1>
+        <p class="lede" data-en="Things I create on my own, out of pure curiosity: from tools for my own workflow to experiments and other hobbies.">Coisas que eu crio por conta própria, por pura curiosidade: de ferramentas
         para o meu próprio fluxo de trabalho a experimentos e outros hobbies.</p>
       </div>
     </section>
@@ -37,18 +41,18 @@
     <section class="panel panel--light" id="sobre">
       <div class="rail">
         <span class="tick" aria-hidden="true"></span>
-        <span>Como &amp; por quê</span>
+        <span data-en="How &amp; why">Como &amp; por quê</span>
       </div>
       <div class="wrap">
         <div class="editorial" data-reveal>
-          <h2>Por<br /><em>que criar?</em></h2>
+          <h2 data-en="Why<br /><em>create?</em>">Por<br /><em>que criar?</em></h2>
           <div class="editorial-body">
-            <p>
+            <p data-en="The main reason I create my own things is to attack problems from a different point of view. After years as a designer specifying solutions, learning to build them gave me another angle to look at each problem.">
               O principal motivo de eu criar as minhas próprias coisas é poder atacar os problemas
               de um ponto de vista diferente. Depois de anos como designer especificando soluções,
               aprender a construí-las me deu um outro ângulo para enxergar cada problema.
             </p>
-            <p>
+            <p data-en="The second reason is that, once you learn to develop, the limit stops existing. If the tool I need doesn't exist, I build it. If it exists but it's paid, I make my own version for personal use, without commercializing or plagiarizing anything for sale, often as open source. In the end, that's what programming gave me: the limits are gone.">
               O segundo motivo é que, quando você aprende a desenvolver, o limite deixa de existir.
               Se a ferramenta de que eu preciso não existe, eu crio. Se ela existe mas é paga, faço
               a minha própria versão para uso pessoal, sem comercializar nem plagiar nada para venda,
@@ -63,8 +67,8 @@
     <section class="panel panel--light panel--tight" id="plugins">
       <div class="wrap">
       <div class="index-heading" data-reveal style="padding-left:0;">
-        <h2>Os <em>plugins</em></h2>
-        <p>Três ferramentas pessoais, em estágios diferentes de maturidade.</p>
+        <h2 data-en="The <em>plugins</em>">Os <em>plugins</em></h2>
+        <p data-en="Three personal tools, at different stages of maturity.">Três ferramentas pessoais, em estágios diferentes de maturidade.</p>
       </div>
       <div class="index-grid" data-reveal style="margin-left:0;">
         <a class="index-cell" href="#figma-navigation">
@@ -101,14 +105,14 @@
           <span class="project-tag">Plugin // Figma Navigation</span>
         </div>
         <div class="spread-content">
-          <h3>O que é a <em>Figma Navigation</em> e qual o desafio?</h3>
+          <h3 data-en="What is <em>Figma Navigation</em> and the challenge?">O que é a <em>Figma Navigation</em> e qual o desafio?</h3>
           <div class="spread-block">
-            <h4>A ideia</h4>
-            <p>O Figma não tem pastas para organizar páginas. Em arquivos grandes isso vira um caos. Criei uma árvore de pastas virtuais que mantém cada página como um PageNode real, sem quebrar nada do comportamento nativo.</p>
+            <h4 data-en="The idea">A ideia</h4>
+            <p data-en="Figma has no folders to organize pages. In large files that becomes chaos. I built a tree of virtual folders that keeps each page as a real PageNode, without breaking any of the native behavior.">O Figma não tem pastas para organizar páginas. Em arquivos grandes isso vira um caos. Criei uma árvore de pastas virtuais que mantém cada página como um PageNode real, sem quebrar nada do comportamento nativo.</p>
           </div>
           <div class="spread-block">
-            <h4>O desenvolvimento</h4>
-            <p>Monorepo com a UI em React num iframe e o controller no sandbox do Figma, com as regras de árvore puras e isoladas e um único ponto de acesso à Plugin API. Desenvolvido em red, green e refactor, com 97 testes e regressão visual por golden files.</p>
+            <h4 data-en="The build">O desenvolvimento</h4>
+            <p data-en="A monorepo with the UI in React inside an iframe and the controller in Figma's sandbox, with pure, isolated tree rules and a single access point to the Plugin API. Built in red, green and refactor, with 97 tests and visual regression via golden files.">Monorepo com a UI em React num iframe e o controller no sandbox do Figma, com as regras de árvore puras e isoladas e um único ponto de acesso à Plugin API. Desenvolvido em red, green e refactor, com 97 testes e regressão visual por golden files.</p>
           </div>
           <div class="spread-block">
             <h4>Stack &amp; status</h4>
@@ -117,11 +121,11 @@
               <span class="tag">React</span>
               <span class="tag">Figma Plugin API</span>
               <span class="tag">Monorepo</span>
-              <span class="tag">MVP funcional</span>
+              <span class="tag" data-en="Functional MVP">MVP funcional</span>
             </div>
           </div>
           <div class="spread-actions">
-            <a class="btn-circle" href="https://github.com/rdsalvesPUC/figma-navigation-plugin" target="_blank" rel="noopener">Código-fonte →</a>
+            <a class="btn-circle" href="https://github.com/rdsalvesPUC/figma-navigation-plugin" target="_blank" rel="noopener" data-en="Source code →">Código-fonte →</a>
           </div>
         </div>
       </div>
@@ -139,14 +143,14 @@
           <span class="project-tag">Plugin // FigLens</span>
         </div>
         <div class="spread-content">
-          <h3>O que é o <em>FigLens</em> e qual o desafio?</h3>
+          <h3 data-en="What is <em>FigLens</em> and the challenge?">O que é o <em>FigLens</em> e qual o desafio?</h3>
           <div class="spread-block">
-            <h4>A ideia</h4>
-            <p>Branches no Figma não têm uma visão de histórico como no Git. Inspirado no GitLens, o FigLens desenha um grafo das branches e versões de um arquivo e mostra o quanto cada branch divergiu do main.</p>
+            <h4 data-en="The idea">A ideia</h4>
+            <p data-en="Branches in Figma don't have a history view like Git's. Inspired by GitLens, FigLens draws a graph of a file's branches and versions and shows how far each branch has diverged from main.">Branches no Figma não têm uma visão de histórico como no Git. Inspirado no GitLens, o FigLens desenha um grafo das branches e versões de um arquivo e mostra o quanto cada branch divergiu do main.</p>
           </div>
           <div class="spread-block">
-            <h4>O desenvolvimento</h4>
-            <p>Consome a REST API do Figma (branch_data e versions) e infere o grafo a partir das chaves de branch e dos timestamps, já que a API não expõe um merge graph real. A comparação é estrutural, por árvores de nós normalizadas, e há um modo demo para revisar a UI sem token.</p>
+            <h4 data-en="The build">O desenvolvimento</h4>
+            <p data-en="It consumes the Figma REST API (branch_data and versions) and infers the graph from branch keys and timestamps, since the API doesn't expose a real merge graph. The comparison is structural, using normalized node trees, and there's a demo mode to review the UI without a token.">Consome a REST API do Figma (branch_data e versions) e infere o grafo a partir das chaves de branch e dos timestamps, já que a API não expõe um merge graph real. A comparação é estrutural, por árvores de nós normalizadas, e há um modo demo para revisar a UI sem token.</p>
           </div>
           <div class="spread-block">
             <h4>Stack &amp; status</h4>
@@ -158,7 +162,7 @@
             </div>
           </div>
           <div class="spread-actions">
-            <a class="btn-circle" href="https://github.com/rdsalvesPUC/figlens" target="_blank" rel="noopener">Código-fonte →</a>
+            <a class="btn-circle" href="https://github.com/rdsalvesPUC/figlens" target="_blank" rel="noopener" data-en="Source code →">Código-fonte →</a>
           </div>
         </div>
       </div>
@@ -176,14 +180,14 @@
           <span class="project-tag">Plugin // Json to Layout</span>
         </div>
         <div class="spread-content">
-          <h3>O que é o <em>Json to Layout</em> e qual o desafio?</h3>
+          <h3 data-en="What is <em>Json to Layout</em> and the challenge?">O que é o <em>Json to Layout</em> e qual o desafio?</h3>
           <div class="spread-block">
-            <h4>A ideia</h4>
-            <p>Investigar uma ponte entre estrutura em JSON e criação de layout no Figma: pegar um JSON REST-like e transformá-lo em interface visual editável no canvas, em vez de montar tela a tela na mão.</p>
+            <h4 data-en="The idea">A ideia</h4>
+            <p data-en="Exploring a bridge between JSON structure and layout creation in Figma: taking a REST-like JSON and turning it into an editable visual interface on the canvas, instead of building screen by screen by hand.">Investigar uma ponte entre estrutura em JSON e criação de layout no Figma: pegar um JSON REST-like e transformá-lo em interface visual editável no canvas, em vez de montar tela a tela na mão.</p>
           </div>
           <div class="spread-block">
-            <h4>O desenvolvimento</h4>
-            <p>Um MVP deliberadamente pequeno: entrada por textarea, validação antes de criar qualquer node, tradução recursiva para a Plugin API e uma única raiz editável, com rollback quando a geração falha. Tudo local, sem backend. A evolução é planejada em MVPs, dos elementos nativos aos componentes instanciados.</p>
+            <h4 data-en="The build">O desenvolvimento</h4>
+            <p data-en="A deliberately small MVP: input via textarea, validation before creating any node, recursive translation to the Plugin API and a single editable root, with rollback when generation fails. All local, no backend. The evolution is planned in MVPs, from native elements to instanced components.">Um MVP deliberadamente pequeno: entrada por textarea, validação antes de criar qualquer node, tradução recursiva para a Plugin API e uma única raiz editável, com rollback quando a geração falha. Tudo local, sem backend. A evolução é planejada em MVPs, dos elementos nativos aos componentes instanciados.</p>
           </div>
           <div class="spread-block">
             <h4>Stack &amp; status</h4>
@@ -191,11 +195,11 @@
               <span class="tag">TypeScript</span>
               <span class="tag">Figma Plugin API</span>
               <span class="tag">Node</span>
-              <span class="tag">MVP 1 concluído</span>
+              <span class="tag" data-en="MVP 1 complete">MVP 1 concluído</span>
             </div>
           </div>
           <div class="spread-actions">
-            <a class="btn-circle" href="https://github.com/rdsalvesPUC/json-to-layout-plugin-mvp" target="_blank" rel="noopener">Código-fonte →</a>
+            <a class="btn-circle" href="https://github.com/rdsalvesPUC/json-to-layout-plugin-mvp" target="_blank" rel="noopener" data-en="Source code →">Código-fonte →</a>
           </div>
         </div>
       </div>
@@ -206,9 +210,9 @@
   <footer class="panel panel--dark" id="contato">
     <div class="wrap">
       <div class="closing" data-reveal style="padding:0;">
-        <h2>Vamos construir algo juntos.</h2>
-        <p>Acha que eu posso ser a pessoa certa para o seu próximo projeto?</p>
-        <a class="btn-box" href="mailto:rdsalves@gmail.com">Entrar em contato</a>
+        <h2 data-en="Let&rsquo;s build something together.">Vamos construir algo juntos.</h2>
+        <p data-en="Think I might be the right person for your next project?">Acha que eu posso ser a pessoa certa para o seu próximo projeto?</p>
+        <a class="btn-box" href="mailto:rdsalves@gmail.com" data-en="Get in touch">Entrar em contato</a>
       </div>
       <div class="site-footer" style="padding-bottom:0; margin-top:72px;">
         <span class="mark">Rodrigo Alves</span>
