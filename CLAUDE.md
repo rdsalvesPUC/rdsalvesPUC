@@ -49,7 +49,7 @@ cv.html             Currículo — competências em chips (design/dev) com keywo
 README.md           Banner clicável do perfil (renderiza em github.com/rdsalvesPUC) → site
 assets/
   css/style.css     Design system inteiro, um arquivo só
-  js/script.js      Reveal on scroll (progressive enhancement)
+  js/script.js      Reveal on scroll + troca de idioma PT/EN (ambos progressive enhancement)
   fonts/*.woff2     ArgentCF (6 pesos) + Moderat (2) — convertidos de .ttf/.otf
   icons/*.svg       Setas e "×" (não referenciados: os ícones estão inline no HTML)
   img/logos/        10 logos de cliente, 300x300 PNG
@@ -96,6 +96,19 @@ por `file://`.)
    classes definem o shorthand `padding` e uma sobrescreve a outra por inteiro.
    Isso já quebrou o espaçamento no mobile uma vez.
 
+### Site bilíngue (PT/EN) — como funciona
+
+O site é **um só**, bilíngue, com uma chave **PT / EN** na nav (último item de
+`.nav-links`). O **português é a fonte escrita** na página; o inglês mora **inline**
+em atributos `data-en` no mesmo elemento. Um trecho no `js/script.js` troca o
+`innerHTML` de cada `[data-en]` (por isso títulos com `<em>` continuam funcionando),
+atualiza `<html lang>`, o `<title>` e o `<meta description>`, e **lembra a escolha em
+`localStorage` (chave `lang`)** entre as páginas. É progressive enhancement: **sem JS,
+fica em PT**. Só levam `data-en` os textos que mudam — termos técnicos/nomes próprios
+iguais em inglês (React, Figma, Axure, botões "Visit…") ficam como estão. Para traduzir
+conteúdo novo, é só adicionar `data-en="..."` no elemento (pode conter `<em>`/`<strong>`;
+não use aspas duplas dentro do valor).
+
 ---
 
 ## O que ainda é placeholder
@@ -112,6 +125,9 @@ Falta também o texto de abertura "Por que plugins?".
 
 ### Já resolvido (não refazer)
 
+- **Site bilíngue (PT/EN)** — chave na nav, inglês inline em `data-en`, JS troca na
+  hora e lembra a escolha (localStorage). PT é o padrão. Detalhes na seção "Site
+  bilíngue" acima. Cobre as 4 páginas.
 - **Home reconceituada** — saiu da transcrição do PDF antigo para o conceito
   "onde o design encontra o código" (rail/eyebrow/tagline em PT). "Quem eu sou"
   reescrito (bolsa ProUni, Allos (brMalls), ponte design+código, 2ª graduação em
