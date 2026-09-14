@@ -720,6 +720,18 @@ a {
   opacity: 1;
 }
 
+/* nota de autoria/IA no rodapé (aparece nas 4 páginas) */
+.ai-note {
+  margin: 0 0 8px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line-on-dark);
+  font-size: 0.72rem;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  opacity: 0.5;
+  max-width: 70ch;
+}
+
 /* ---------- Reveal on scroll (progressive enhancement) ---------- */
 
 .reveal-ready {
