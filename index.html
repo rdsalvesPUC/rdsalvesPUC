@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rodrigo Alves — Onde o design encontra o código</title>
-  <meta name="description" content="Rodrigo Alves — UX designer há 15 anos e desenvolvedor por escolha. Onde o design encontra o código: portfólio, coleção de criações e currículo." />
+  <title data-en="Rodrigo Alves — Where design meets code">Rodrigo Alves — Onde o design encontra o código</title>
+  <meta name="description" data-en="Rodrigo Alves — a UX designer for 15 years and a developer by choice. Where design meets code: portfolio, collection and résumé." content="Rodrigo Alves — UX designer há 15 anos e desenvolvedor por escolha. Onde o design encontra o código: portfólio, coleção de criações e currículo." />
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
@@ -12,9 +12,13 @@
   <nav class="site-nav">
     <a href="./index.html" class="brand" aria-current="page">Rodrigo Alves</a>
     <div class="nav-links">
-      <a href="./cv.html">Currículo</a>
-      <a href="./portfolio.html">Portfólio</a>
-      <a href="./colecao.html">Coleção</a>
+      <a href="./cv.html" data-en="Résumé">Currículo</a>
+      <a href="./portfolio.html" data-en="Portfolio">Portfólio</a>
+      <a href="./colecao.html" data-en="Collection">Coleção</a>
+      <span class="lang-switch" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang-set="pt" aria-pressed="true">PT</button>
+        <button type="button" data-lang-set="en" aria-pressed="false">EN</button>
+      </span>
     </div>
   </nav>
 
@@ -24,16 +28,16 @@
     <section class="panel panel--dark hero lockup">
       <div class="rail">
         <span class="tick" aria-hidden="true"></span>
-        <span>onde o design encontra o código</span>
+        <span data-en="where design meets code">onde o design encontra o código</span>
       </div>
       <div class="wrap">
         <div class="hero-eyebrow">
-          EU SOU
+          <span data-en="I AM">EU SOU</span>
           <svg class="icon" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H38.5M38.5 8L31.5 1M38.5 8L31.5 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <h1>Rodrigo<br />Alves</h1>
         <p class="tagline">
-          design &amp; código
+          <span data-en="design &amp; code">design &amp; código</span>
           <svg class="icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L15 15M15 1L1 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
         </p>
       </div>
@@ -47,30 +51,30 @@
     <section class="panel panel--light" id="sobre">
       <div class="rail">
         <span class="tick" aria-hidden="true"></span>
-        <span>A busca eterna pela usabilidade</span>
+        <span data-en="The eternal pursuit of usability">A busca eterna pela usabilidade</span>
       </div>
       <div class="wrap">
         <div class="editorial" data-reveal>
-          <h2>Quem<br /><em>eu sou</em></h2>
+          <h2 data-en="Who<br /><em>I am</em>">Quem<br /><em>eu sou</em></h2>
           <div class="editorial-body">
-            <p>
+            <p data-en="Hi, I'm Rodrigo Alves, from Rio de Janeiro, Brazil. A researcher by nature and endlessly curious, I've always been driven to understand how things work and why people use them the way they do.">
               Olá, sou o Rodrigo Alves, do Rio de Janeiro. Pesquisador por natureza e curioso de
               carteirinha, sempre fui movido por entender como as coisas funcionam e por que as
               pessoas usam do jeito que usam.
             </p>
-            <p>
+            <p data-en="I started in design. In 2007 I joined PUC-Rio, one of the largest design schools in the country, on a full ProUni scholarship. Since then I've spent 15 years designing user-centered digital products (websites, e-commerce, software, IoT and apps) for clients such as Grupo Casas Bahia, Allos (brMalls), FGV, Coca-Cola, Rede D&rsquo;Or, Americanas and e-Bricks Ventures.">
               Comecei pelo design. Em 2007 entrei na PUC-Rio, uma das maiores faculdades de design
               do país, com bolsa integral pelo ProUni. Desde então foram 15 anos projetando produtos
               digitais centrados no usuário (sites, e-commerces, softwares, IoT e apps) para
               clientes como Grupo Casas Bahia, Allos (brMalls), FGV, Coca-Cola, Rede D&rsquo;Or,
               Americanas e e-Bricks Ventures.
             </p>
-            <p>
+            <p data-en="But designing was never enough for me: I also wanted to build. That drive took me back to the classroom (I'm currently pursuing my second degree, Information Systems at PUCPR) and into writing my own code.">
               Só que projetar nunca me bastou: eu queria também construir. Essa vontade me levou de
               volta à sala de aula (hoje curso a minha segunda graduação, Sistemas de Informação na
               PUCPR) e à prática de escrever o meu próprio código.
             </p>
-            <p>
+            <p data-en="This is where design and code meet. I use what I've learned in fifteen years of UX to build the tools I'd want to use myself, and it's that bridge between designing and developing that drives me today.">
               É aqui que design e código se encontram. Uso o que aprendi em quinze anos de UX para
               construir as ferramentas que eu mesmo gostaria de usar, e é essa ponte entre desenhar
               e desenvolver que me move hoje.
@@ -84,33 +88,33 @@
     <section class="panel panel--light panel--tight">
       <div class="wrap">
         <div class="index-heading" data-reveal style="padding-left:0;">
-          <h2>O que tem <em>aqui</em></h2>
+          <h2 data-en="What's <em>here</em>">O que tem <em>aqui</em></h2>
         </div>
         <div class="nav-grid" data-reveal>
 
           <a class="nav-card" href="./cv.html">
             <span class="num">01 / 03</span>
-            <h3>Currículo</h3>
-            <p>Quinze anos de experiência, formações e competências.</p>
-            <span class="go">Ver currículo
+            <h3 data-en="Résumé">Currículo</h3>
+            <p data-en="Fifteen years of experience, education and skills.">Quinze anos de experiência, formações e competências.</p>
+            <span class="go"><span data-en="View résumé">Ver currículo</span>
               <svg class="icon" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H38.5M38.5 8L31.5 1M38.5 8L31.5 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </a>
 
           <a class="nav-card" href="./portfolio.html">
             <span class="num">02 / 03</span>
-            <h3>Portfólio</h3>
-            <p>Dez projetos de UX e research para clientes como SAUER, Americanas, Rede D&rsquo;Or, FGV e Unimarc.</p>
-            <span class="go">Ver projetos
+            <h3 data-en="Portfolio">Portfólio</h3>
+            <p data-en="Ten UX and research projects for clients such as SAUER, Americanas, Rede D&rsquo;Or, FGV and Unimarc.">Dez projetos de UX e research para clientes como SAUER, Americanas, Rede D&rsquo;Or, FGV e Unimarc.</p>
+            <span class="go"><span data-en="View projects">Ver projetos</span>
               <svg class="icon" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H38.5M38.5 8L31.5 1M38.5 8L31.5 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </a>
 
           <a class="nav-card" href="./colecao.html">
             <span class="num">03 / 03</span>
-            <h3>Coleção</h3>
-            <p>Ferramentas que eu construo para o meu próprio fluxo de trabalho, entre outros hobbies.</p>
-            <span class="go">Ver coleção
+            <h3 data-en="Collection">Coleção</h3>
+            <p data-en="Tools I build for my own workflow, among other hobbies.">Ferramentas que eu construo para o meu próprio fluxo de trabalho, entre outros hobbies.</p>
+            <span class="go"><span data-en="View collection">Ver coleção</span>
               <svg class="icon" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8H38.5M38.5 8L31.5 1M38.5 8L31.5 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
           </a>
@@ -123,7 +127,7 @@
     <section class="panel panel--light panel--tight">
       <div class="wrap">
         <div class="index-heading" data-reveal style="padding-left:0;">
-          <h2>Alguns <em>clientes</em></h2>
+          <h2 data-en="A few <em>clients</em>">Alguns <em>clientes</em></h2>
         </div>
         <div class="logo-grid" data-reveal>
           <div class="logo-cell"><img src="./assets/img/logos/sauer.png" alt="SAUER" /></div>
@@ -145,9 +149,9 @@
   <footer class="panel panel--dark" id="contato">
     <div class="wrap">
       <div class="closing" data-reveal style="padding:0;">
-        <h2>Vamos construir algo juntos.</h2>
-        <p>Acha que eu posso ser a pessoa certa para o seu próximo projeto?</p>
-        <a class="btn-box" href="mailto:rdsalves@gmail.com">Entrar em contato</a>
+        <h2 data-en="Let&rsquo;s build something together.">Vamos construir algo juntos.</h2>
+        <p data-en="Think I might be the right person for your next project?">Acha que eu posso ser a pessoa certa para o seu próximo projeto?</p>
+        <a class="btn-box" href="mailto:rdsalves@gmail.com" data-en="Get in touch">Entrar em contato</a>
       </div>
       <div class="site-footer" style="padding-bottom:0; margin-top:72px;">
         <span class="mark">Rodrigo Alves</span>
