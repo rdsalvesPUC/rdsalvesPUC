@@ -104,17 +104,20 @@
           <h3>O que é a <em>Figma Navigation</em> e qual o desafio?</h3>
           <div class="spread-block">
             <h4>A ideia</h4>
-            <p class="placeholder-text">[PLACEHOLDER — o que te fez criar esse plugin? que problema de navegação/organização no Figma ele resolve?]</p>
+            <p>O Figma não tem pastas para organizar páginas. Em arquivos grandes isso vira um caos. Criei uma árvore de pastas virtuais que mantém cada página como um PageNode real, sem quebrar nada do comportamento nativo.</p>
           </div>
           <div class="spread-block">
             <h4>O desenvolvimento</h4>
-            <p class="placeholder-text">[PLACEHOLDER — como foi construído, principais desafios, decisões técnicas]</p>
+            <p>Monorepo com a UI em React num iframe e o controller no sandbox do Figma, com as regras de árvore puras e isoladas e um único ponto de acesso à Plugin API. Desenvolvido em red, green e refactor, com 97 testes e regressão visual por golden files.</p>
           </div>
           <div class="spread-block">
             <h4>Stack &amp; status</h4>
             <div class="tag-list">
-              <span class="tag">[stack]</span>
-              <span class="tag">[status]</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">React</span>
+              <span class="tag">Figma Plugin API</span>
+              <span class="tag">Monorepo</span>
+              <span class="tag">MVP funcional</span>
             </div>
           </div>
           <div class="spread-actions">
@@ -139,17 +142,19 @@
           <h3>O que é o <em>FigLens</em> e qual o desafio?</h3>
           <div class="spread-block">
             <h4>A ideia</h4>
-            <p class="placeholder-text">[PLACEHOLDER — o que te fez criar esse plugin? que "lente"/inspeção ele oferece sobre os arquivos?]</p>
+            <p>Branches no Figma não têm uma visão de histórico como no Git. Inspirado no GitLens, o FigLens desenha um grafo das branches e versões de um arquivo e mostra o quanto cada branch divergiu do main.</p>
           </div>
           <div class="spread-block">
             <h4>O desenvolvimento</h4>
-            <p class="placeholder-text">[PLACEHOLDER — como foi construído, principais desafios, decisões técnicas]</p>
+            <p>Consome a REST API do Figma (branch_data e versions) e infere o grafo a partir das chaves de branch e dos timestamps, já que a API não expõe um merge graph real. A comparação é estrutural, por árvores de nós normalizadas, e há um modo demo para revisar a UI sem token.</p>
           </div>
           <div class="spread-block">
             <h4>Stack &amp; status</h4>
             <div class="tag-list">
-              <span class="tag">[stack]</span>
-              <span class="tag">[status]</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Figma REST API</span>
+              <span class="tag">Playwright</span>
+              <span class="tag">MVP</span>
             </div>
           </div>
           <div class="spread-actions">
@@ -174,17 +179,19 @@
           <h3>O que é o <em>Json to Layout</em> e qual o desafio?</h3>
           <div class="spread-block">
             <h4>A ideia</h4>
-            <p class="placeholder-text">[PLACEHOLDER — que dor de popular telas com dados reais/mockados esse plugin resolve?]</p>
+            <p>Investigar uma ponte entre estrutura em JSON e criação de layout no Figma: pegar um JSON REST-like e transformá-lo em interface visual editável no canvas, em vez de montar tela a tela na mão.</p>
           </div>
           <div class="spread-block">
             <h4>O desenvolvimento</h4>
-            <p class="placeholder-text">[PLACEHOLDER — como foi construído, principais desafios, decisões técnicas]</p>
+            <p>Um MVP deliberadamente pequeno: entrada por textarea, validação antes de criar qualquer node, tradução recursiva para a Plugin API e uma única raiz editável, com rollback quando a geração falha. Tudo local, sem backend. A evolução é planejada em MVPs, dos elementos nativos aos componentes instanciados.</p>
           </div>
           <div class="spread-block">
             <h4>Stack &amp; status</h4>
             <div class="tag-list">
-              <span class="tag">[stack]</span>
-              <span class="tag">[status]</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Figma Plugin API</span>
+              <span class="tag">Node</span>
+              <span class="tag">MVP 1 concluído</span>
             </div>
           </div>
           <div class="spread-actions">
